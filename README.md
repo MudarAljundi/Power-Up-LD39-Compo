@@ -7,8 +7,8 @@ Made in 2 days for Ludum Dare 39 Compo. Unity HTML5 platformer.
 Zuhar
 
 ## Tools used
-Unity 2017
-[Aseprite](https://www.aseprite.org/)
+Unity 2017  
+[Aseprite](https://www.aseprite.org/)  
 http://www.bfxr.net/  
 http://abundant-music.com/
 
