@@ -70,7 +70,7 @@ public class Shooter : MonoBehaviour {
 		}
 
 
-		if (hardInput.GetKeyDown("Shoot") == true && GameManager.powerInLevel > 10 && target != null) {
+		if (hardInput.GetKeyDown("Shoot") == true && GameManager.powerInLevel > 0 && target != null) {
 			
 			RaycastHit hit;
 			Physics.Linecast(myTransform.position, target.position, out hit, (1 << GameManager.worldLayerMask) + (1 << GameManager.enemyLayerMask));

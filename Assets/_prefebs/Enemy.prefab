@@ -84,7 +84,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2ca3ca54c133e594fbaa3c28538367c7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  damage: 20
+  damage: 10
   faction: Floaty
 --- !u!114 &114746803161599692
 MonoBehaviour:

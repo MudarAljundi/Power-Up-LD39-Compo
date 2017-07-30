@@ -39,8 +39,8 @@ public class GameManager : MonoBehaviour {
 	private void Update() {
 
 		powerInLevel -= 1 * Time.deltaTime;
+		powerInLevel = Mathf.Clamp(powerInLevel, 0, 70);
 
-		print(powerInLevel);
 		if (hardInput.GetKeyDown("Shoot") && powerInLevel > 10) {
 
 			if (powerInLevel < 70 && powerInLevel > 60) {
@@ -59,6 +59,9 @@ public class GameManager : MonoBehaviour {
 			}
 			else if (powerInLevel < 20 && powerInLevel > 10) {
 				powerInLevel = 10;
+			}
+			else if (powerInLevel < 10 && powerInLevel > 0) {
+				powerInLevel = 0;
 			}
 
 		}
