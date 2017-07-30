@@ -2,14 +2,14 @@
 Made in 2 days for Ludum Dare 39 Compo. Unity HTML5 platformer.
 
 ## Special Thanks
-[Stuffed Wombat](https://twitter.com/wombatstuff)
-[Muddasheep](farm.muddasheep.com)
+[Stuffed Wombat](https://twitter.com/wombatstuff)  
+[Muddasheep](http://muddasheep.com/)  
 Zuhar
 
 ## Tools used
-Unity
-Aseprite
-http://www.bfxr.net/
+Unity  
+Aseprite  
+http://www.bfxr.net/  
 http://abundant-music.com/
 
 ## Uses the following 3rd-party Unity assets which weren't included in the project:
