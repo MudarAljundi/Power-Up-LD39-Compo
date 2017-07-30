@@ -5,6 +5,8 @@ using UnityEngine.Events;
 
 public class Health : MonoBehaviour {
 
+	public AudioClip damageSND;
+	public AudioClip deadSND;
 	public List<string> uneffectedByFactions;
 	public float maxHP;
 	public bool aimable = true;
@@ -48,6 +50,9 @@ public class Health : MonoBehaviour {
 			onKill.Invoke();
 			GameManager.shootableObjects.Remove(transform);
 			
+			if (deadSND != null) {
+				GetComponent<AudioSource>().PlayOneShot(deadSND);
+			}
 			if (particleSystemExplosion == "Debris") {
 				GameManager.debrisParticleSystem.transform.position = transform.position;
 				GameManager.debrisParticleSystem.Play();
@@ -59,6 +64,9 @@ public class Health : MonoBehaviour {
 			return;
 		}
 
+		if (damageSND != null) {
+			GetComponent<AudioSource>().PlayOneShot(damageSND);
+		}
 		StartCoroutine(FlashRed());
 		onDamage.Invoke();
 	}

@@ -26,12 +26,12 @@ SpriteAtlas:
       enableTightPacking: 1
     packedHash:
       serializedVersion: 2
-      Hash: 1291742ae5dc6d7ecb585c6b4fef7595
+      Hash: d487485242a5f27bd96c54088d0b8db6
     variantMultiplier: 1
     bindAsDefault: 1
     finalFormat: 4
-    hashString: 1291742ae5dc6d7ecb585c6b4fef7595
-    totalSpriteSurfaceArea: 25006
+    hashString: d487485242a5f27bd96c54088d0b8db6
+    totalSpriteSurfaceArea: 25262
     packables:
     - {fileID: 102900000, guid: 97097fddc8dedf2499f9d24c75b27487, type: 3}
     packedSpriteRenderDataKeys:
@@ -53,6 +53,7 @@ SpriteAtlas:
     - 0c27ad59f060a9143b394ed3e697c506: 21300008
     - 47e1a461b526f5d4882d0d3bb8b8edae: 21300002
     - 14412d349415a22469c04300c2aa3236: 21300000
+    - b4467c2e5c5da43489d7c4f4663e0dde: 21300000
     - 4620f852cb6587c4baa4314622277064: 21300000
     - f71a1bf6298ba8f4dad6101784f87ef3: 21300002
     - f71a1bf6298ba8f4dad6101784f87ef3: 21300000
@@ -80,6 +81,7 @@ SpriteAtlas:
   - {fileID: 21300008, guid: 0c27ad59f060a9143b394ed3e697c506, type: 3}
   - {fileID: 21300002, guid: 47e1a461b526f5d4882d0d3bb8b8edae, type: 3}
   - {fileID: 21300000, guid: 14412d349415a22469c04300c2aa3236, type: 3}
+  - {fileID: 21300000, guid: b4467c2e5c5da43489d7c4f4663e0dde, type: 3}
   - {fileID: 21300000, guid: 4620f852cb6587c4baa4314622277064, type: 3}
   - {fileID: 21300002, guid: f71a1bf6298ba8f4dad6101784f87ef3, type: 3}
   - {fileID: 21300000, guid: f71a1bf6298ba8f4dad6101784f87ef3, type: 3}
@@ -106,6 +108,7 @@ SpriteAtlas:
   - Treadmill_Right_1
   - HudPower_1
   - Lines
+  - Crystal
   - Black
   - Enemy 1
   - Enemy 0

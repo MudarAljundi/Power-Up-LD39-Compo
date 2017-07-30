@@ -40,11 +40,11 @@ AnimatorStateTransition:
   m_PrefabInternal: {fileID: 0}
   m_Name: 
   m_Conditions:
-  - m_ConditionMode: 1
-    m_ConditionEvent: Empty
-    m_EventTreshold: 0
   - m_ConditionMode: 2
     m_ConditionEvent: CurrentAnimation
+    m_EventTreshold: 0
+  - m_ConditionMode: 1
+    m_ConditionEvent: Empty
     m_EventTreshold: 0
   m_DstStateMachine: {fileID: 0}
   m_DstState: {fileID: 1102140585963638988}
@@ -95,10 +95,10 @@ AnimatorStateTransition:
   m_Name: 
   m_Conditions:
   - m_ConditionMode: 2
-    m_ConditionEvent: Empty
-    m_EventTreshold: 0
-  - m_ConditionMode: 1
     m_ConditionEvent: CurrentAnimation
+    m_EventTreshold: 0
+  - m_ConditionMode: 2
+    m_ConditionEvent: Empty
     m_EventTreshold: 0
   m_DstStateMachine: {fileID: 0}
   m_DstState: {fileID: 1102597543903905206}
@@ -124,6 +124,9 @@ AnimatorStateTransition:
   - m_ConditionMode: 1
     m_ConditionEvent: CurrentAnimation
     m_EventTreshold: 0
+  - m_ConditionMode: 2
+    m_ConditionEvent: Empty
+    m_EventTreshold: 0
   m_DstStateMachine: {fileID: 0}
   m_DstState: {fileID: 1102929211820774732}
   m_Solo: 0
@@ -148,6 +151,9 @@ AnimatorStateTransition:
   - m_ConditionMode: 1
     m_ConditionEvent: CurrentAnimation
     m_EventTreshold: 0
+  - m_ConditionMode: 2
+    m_ConditionEvent: Empty
+    m_EventTreshold: 0
   m_DstStateMachine: {fileID: 0}
   m_DstState: {fileID: 1102929211820774732}
   m_Solo: 0
@@ -169,7 +175,7 @@ AnimatorStateTransition:
   m_PrefabInternal: {fileID: 0}
   m_Name: 
   m_Conditions:
-  - m_ConditionMode: 1
+  - m_ConditionMode: 2
     m_ConditionEvent: CurrentAnimation
     m_EventTreshold: 0
   - m_ConditionMode: 1

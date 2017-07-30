@@ -13,6 +13,7 @@ public class GameManager : MonoBehaviour {
 	public static int worldTableLayerMask;
 
 	public static GameObject gameManagerGameObject;
+	public static AudioSource treadmillAudioSource;
 
 	public static GameObject player;
 	public static Transform playerTransform;
@@ -31,18 +32,21 @@ public class GameManager : MonoBehaviour {
 		gameManagerGameObject = gameObject;
 
 		player = GameObject.Find("Player");
+		treadmillAudioSource = GameObject.Find("MainCamera/TreadmillAudio").GetComponent<AudioSource>();
 		playerTransform = GameObject.Find("Player").transform;
 
 		debrisParticleSystem = transform.Find("DebrisParticleSystem").GetComponent<ParticleSystem>();
 	}
 
-	private void Update() {
+	private void LateUpdate() {
 
-		powerInLevel -= 1 * Time.deltaTime;
+		// a timer would be too confusing anyway
+		//powerInLevel -= 1 * Time.deltaTime;
 		powerInLevel = Mathf.Clamp(powerInLevel, 0, 70);
-
+		
 		if (hardInput.GetKeyDown("Shoot")) {
-
+			powerInLevel -= 10;
+			/*
 			if (powerInLevel < 70 && powerInLevel > 60) {
 				powerInLevel = 60;
 			} else if (powerInLevel < 60 && powerInLevel > 50) {
@@ -63,7 +67,7 @@ public class GameManager : MonoBehaviour {
 			else if (powerInLevel < 10 && powerInLevel > 0) {
 				powerInLevel = 0;
 			}
-
+			*/
 		}
 	}
 }

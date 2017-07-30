@@ -6,6 +6,8 @@ using UnityEngine.Events;
 
 public class MovementController : MonoBehaviour {
 
+	public AudioClip outOfAmmo;
+	public AudioClip jump;
 	public float horizontalMoveForce;
 	public float jumpImpulse;
 
@@ -13,8 +15,9 @@ public class MovementController : MonoBehaviour {
 	public bool canMove = true;
 	[HideInInspector]
 	public UnityEvent onJump;
+	public UnityEvent onRevive;
 
-	private Vector3 checkpointPosition;
+	public Vector3 checkpointPosition;
 	private bool onGround = false;
 
 	private Rigidbody myRigidbody;
@@ -31,27 +34,39 @@ public class MovementController : MonoBehaviour {
 
 	public void Revive () {
 		transform.position = checkpointPosition;
-
+		onRevive.Invoke();
 	}
 
 	private void Update() {
 		
 		onGround = GetOnGround();
 
-		if (hardInput.GetKeyDown("Jump") == true && onGround == true) {
+		if ((hardInput.GetKeyDown("Jump") == true || hardInput.GetKeyDown("JumpAlt") == true) && onGround == true) {
 			
 			if (onJump != null) {
 				onJump.Invoke();
 			}
+			GetComponent<AudioSource>().PlayOneShot(jump);
+			
 			//canMove = true;
 			myRigidbody.AddForce(new Vector2(0, 1) * jumpImpulse, ForceMode.Impulse);
 
-		} else if (hardInput.GetKeyUp("Jump") == true && myRigidbody.velocity.y > 0) {
+		} else if ((hardInput.GetKeyUp("Jump") == true || hardInput.GetKeyUp("JumpAlt") == true) && myRigidbody.velocity.y > 0) {
 
 			myRigidbody.velocity = new Vector2(myRigidbody.velocity.x, myRigidbody.velocity.y * 0.5f);
 		}
 
 		// animation
+		if (hardInput.GetKeyDown("Shoot") == true) {
+			if (GameManager.powerInLevel == 0) {
+
+				GetComponent<AudioSource>().PlayOneShot(outOfAmmo);
+			} else {
+				GetComponent<AudioSource>().Play();
+			}
+		} else {
+
+		}
 		if (canMove == true) {
 
 			if (Mathf.Abs(myRigidbody.velocity.x) > 2) {
@@ -66,10 +81,10 @@ public class MovementController : MonoBehaviour {
 			if (h != 0) {
 				GetComponent<Animator>().SetBool("IsMoving", true);
 				if (h < 0) {
-					transform.localScale = new Vector3(-1, 1, 1);
+					GetComponent<SpriteRenderer>().flipX = true;
 				}
 				else if (h > 0) {
-					transform.localScale = new Vector3(1, 1, 1);
+					GetComponent<SpriteRenderer>().flipX = false;
 				}
 
 			} else {
@@ -79,6 +94,14 @@ public class MovementController : MonoBehaviour {
 		}
 
 		GetComponent<Animator>().SetBool("InMidair", !onGround);
+
+		// failsafe on infinite falling
+		if (myRigidbody.position.y < -50) {
+			Revive();
+		}
+		if (Input.GetKeyDown(KeyCode.R)) {
+			Revive();
+		}
 	}
 
 	private void FixedUpdate () {
@@ -98,10 +121,10 @@ public class MovementController : MonoBehaviour {
 			myRigidbody.AddForce(new Vector2(1, 0) * h * horizontalMoveForce, ForceMode.Force);
 			
 			if (h < 0) {
-				transform.localScale = new Vector3(-1, 1, 1);
+				GetComponent<SpriteRenderer>().flipX = true;
 			}
 			else if (h > 0) {
-				transform.localScale = new Vector3(1, 1, 1);
+				GetComponent<SpriteRenderer>().flipX = false;
 			}
 		}
 	}

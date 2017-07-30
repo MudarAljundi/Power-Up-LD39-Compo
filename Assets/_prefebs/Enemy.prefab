@@ -139,6 +139,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 731d3fb2f69b51e46a116b41d327cc37, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  damageSND: {fileID: 0}
+  deadSND: {fileID: 8300000, guid: 89aa8e5ce7b2c60449b91abe83ca32b8, type: 3}
   uneffectedByFactions:
   - Floaty
   maxHP: 5

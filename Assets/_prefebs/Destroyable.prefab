@@ -26,7 +26,7 @@ GameObject:
   - component: {fileID: 114737290564991330}
   - component: {fileID: 114823509702436622}
   - component: {fileID: 65559679036159950}
-  m_Layer: 10
+  m_Layer: 9
   m_Name: Destroyable
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -40,7 +40,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1086125661885364}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 5, y: 2, z: 0.5}
+  m_LocalPosition: {x: -61, y: 8.5, z: 0.25}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -96,7 +96,7 @@ BoxCollider:
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1.5}
-  m_Center: {x: 0.5, y: 0.5, z: -0.25}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!114 &114247138768675404
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -131,7 +131,7 @@ MonoBehaviour:
       offset: {x: 0, y: 0}
       rotation: 0
       justify: 0
-      localPivot: {x: -0.5, y: 0.5}
+      localPivot: {x: 0, y: 0}
       localSize: {x: 0, y: 0}
       anchor: 9
     _mat: {fileID: 2100000, guid: d92160909c525374ea95e0afd9f859c5, type: 2}
@@ -160,7 +160,7 @@ MonoBehaviour:
       offset: {x: 0, y: 0}
       rotation: 0
       justify: 0
-      localPivot: {x: -0.25, y: 0.5}
+      localPivot: {x: 0, y: 0}
       localSize: {x: 0, y: 0}
       anchor: 9
     _mat: {fileID: 2100000, guid: d92160909c525374ea95e0afd9f859c5, type: 2}
@@ -189,7 +189,7 @@ MonoBehaviour:
       offset: {x: 0, y: 0}
       rotation: 0
       justify: 0
-      localPivot: {x: 0.5, y: 0.5}
+      localPivot: {x: 0, y: 0}
       localSize: {x: 0, y: 0}
       anchor: 9
     _mat: {fileID: 2100000, guid: d92160909c525374ea95e0afd9f859c5, type: 2}
@@ -218,7 +218,7 @@ MonoBehaviour:
       offset: {x: 0, y: 0}
       rotation: 0
       justify: 0
-      localPivot: {x: 0.25, y: 0.5}
+      localPivot: {x: 0, y: 0}
       localSize: {x: 0, y: 0}
       anchor: 9
     _mat: {fileID: 2100000, guid: d92160909c525374ea95e0afd9f859c5, type: 2}
@@ -247,7 +247,7 @@ MonoBehaviour:
       offset: {x: 0, y: 0}
       rotation: 0
       justify: 0
-      localPivot: {x: 0.5, y: -0.25}
+      localPivot: {x: 0, y: 0}
       localSize: {x: 0, y: 0}
       anchor: 9
     _mat: {fileID: 2100000, guid: d92160909c525374ea95e0afd9f859c5, type: 2}
@@ -276,7 +276,7 @@ MonoBehaviour:
       offset: {x: 0, y: 0}
       rotation: 0
       justify: 0
-      localPivot: {x: -0.5, y: -0.25}
+      localPivot: {x: 0, y: 0}
       localSize: {x: 0, y: 0}
       anchor: 9
     _mat: {fileID: 2100000, guid: d92160909c525374ea95e0afd9f859c5, type: 2}
@@ -293,55 +293,55 @@ MonoBehaviour:
   - array: 090000000c00000014000000
   - array: 0b0000000e00000012000000
   _vertices:
-  - {x: 0, y: 0, z: 0.5}
-  - {x: 1, y: 0, z: 0.5}
-  - {x: 0, y: 1, z: 0.5}
-  - {x: 1, y: 1, z: 0.5}
-  - {x: 1, y: 0, z: 0.5}
-  - {x: 1, y: 0, z: -1}
-  - {x: 1, y: 1, z: 0.5}
-  - {x: 1, y: 1, z: -1}
-  - {x: 1, y: 0, z: -1}
-  - {x: 0, y: 0, z: -1}
-  - {x: 1, y: 1, z: -1}
-  - {x: 0, y: 1, z: -1}
-  - {x: 0, y: 0, z: -1}
-  - {x: 0, y: 0, z: 0.5}
-  - {x: 0, y: 1, z: -1}
-  - {x: 0, y: 1, z: 0.5}
-  - {x: 0, y: 1, z: 0.5}
-  - {x: 1, y: 1, z: 0.5}
-  - {x: 0, y: 1, z: -1}
-  - {x: 1, y: 1, z: -1}
-  - {x: 0, y: 0, z: -1}
-  - {x: 1, y: 0, z: -1}
-  - {x: 0, y: 0, z: 0.5}
-  - {x: 1, y: 0, z: 0.5}
+  - {x: -0.5, y: -0.5, z: 0.75}
+  - {x: 0.5, y: -0.5, z: 0.75}
+  - {x: -0.5, y: 0.5, z: 0.75}
+  - {x: 0.5, y: 0.5, z: 0.75}
+  - {x: 0.5, y: -0.5, z: 0.75}
+  - {x: 0.5, y: -0.5, z: -0.75}
+  - {x: 0.5, y: 0.5, z: 0.75}
+  - {x: 0.5, y: 0.5, z: -0.75}
+  - {x: 0.5, y: -0.5, z: -0.75}
+  - {x: -0.5, y: -0.5, z: -0.75}
+  - {x: 0.5, y: 0.5, z: -0.75}
+  - {x: -0.5, y: 0.5, z: -0.75}
+  - {x: -0.5, y: -0.5, z: -0.75}
+  - {x: -0.5, y: -0.5, z: 0.75}
+  - {x: -0.5, y: 0.5, z: -0.75}
+  - {x: -0.5, y: 0.5, z: 0.75}
+  - {x: -0.5, y: 0.5, z: 0.75}
+  - {x: 0.5, y: 0.5, z: 0.75}
+  - {x: -0.5, y: 0.5, z: -0.75}
+  - {x: 0.5, y: 0.5, z: -0.75}
+  - {x: -0.5, y: -0.5, z: -0.75}
+  - {x: 0.5, y: -0.5, z: -0.75}
+  - {x: -0.5, y: -0.5, z: 0.75}
+  - {x: 0.5, y: -0.5, z: 0.75}
   _uv:
-  - {x: 0, y: 0}
-  - {x: -1, y: 0}
-  - {x: 0, y: 1}
-  - {x: -1, y: 1}
-  - {x: 0.5, y: 0}
-  - {x: -1, y: 0}
-  - {x: 0.5, y: 1}
-  - {x: -1, y: 1}
-  - {x: 1, y: 0}
-  - {x: 0, y: 0}
-  - {x: 1, y: 1}
-  - {x: 0, y: 1}
-  - {x: 1, y: 0}
-  - {x: -0.5, y: 0}
-  - {x: 1, y: 1}
-  - {x: -0.5, y: 1}
-  - {x: 0, y: 0.5}
-  - {x: 1, y: 0.5}
-  - {x: 0, y: -1}
-  - {x: 1, y: -1}
-  - {x: 0, y: -1}
-  - {x: -1, y: -1}
-  - {x: 0, y: 0.5}
-  - {x: -1, y: 0.5}
+  - {x: 0.5, y: -0.5}
+  - {x: -0.5, y: -0.5}
+  - {x: 0.5, y: 0.5}
+  - {x: -0.5, y: 0.5}
+  - {x: 0.75, y: -0.5}
+  - {x: -0.75, y: -0.5}
+  - {x: 0.75, y: 0.5}
+  - {x: -0.75, y: 0.5}
+  - {x: 0.5, y: -0.5}
+  - {x: -0.5, y: -0.5}
+  - {x: 0.5, y: 0.5}
+  - {x: -0.5, y: 0.5}
+  - {x: 0.75, y: -0.5}
+  - {x: -0.75, y: -0.5}
+  - {x: 0.75, y: 0.5}
+  - {x: -0.75, y: 0.5}
+  - {x: -0.5, y: 0.75}
+  - {x: 0.5, y: 0.75}
+  - {x: -0.5, y: -0.75}
+  - {x: 0.5, y: -0.75}
+  - {x: 0.5, y: -0.75}
+  - {x: -0.5, y: -0.75}
+  - {x: 0.5, y: 0.75}
+  - {x: -0.5, y: 0.75}
   _uv3: []
   _uv4: []
   _tangents: []
@@ -406,7 +406,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 731d3fb2f69b51e46a116b41d327cc37, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  uneffectedByFactions: []
+  uneffectedByFactions:
+  - Floaty
   maxHP: 5
   aimable: 1
   particleSystemExplosion: Debris

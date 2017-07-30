@@ -10,11 +10,8 @@ public class PowerGraphicManager : MonoBehaviour {
 
 	// Update is called once per frame
 	private void Update () {
-
-
-		print(GameManager.powerInLevel);
-		print(currentIndex);
-		if (currentIndex != 7 && GameManager.powerInLevel < 71 && GameManager.powerInLevel > 60) {
+		
+		if (currentIndex != 7 && GameManager.powerInLevel <= 70 && GameManager.powerInLevel > 60) {
 			currentIndex = 7;
 			cells[0].GetComponent<Animator>().SetBool("Empty", false);
 			cells[1].GetComponent<Animator>().SetBool("Empty", false);
@@ -32,7 +29,7 @@ public class PowerGraphicManager : MonoBehaviour {
 			cells[5].GetComponent<Animator>().SetBool("CurrentAnimation", false);
 			cells[6].GetComponent<Animator>().SetBool("CurrentAnimation", true);
 		}
-		else if (currentIndex != 6 && GameManager.powerInLevel < 60 && GameManager.powerInLevel > 50) {
+		else if (currentIndex != 6 && GameManager.powerInLevel <= 60 && GameManager.powerInLevel >= 50) {
 
 			currentIndex = 6;
 			cells[0].GetComponent<Animator>().SetBool("Empty", false);
@@ -51,7 +48,7 @@ public class PowerGraphicManager : MonoBehaviour {
 			cells[5].GetComponent<Animator>().SetBool("CurrentAnimation", true);
 			cells[6].GetComponent<Animator>().SetBool("CurrentAnimation", false);
 		}
-		else if (currentIndex != 5 && GameManager.powerInLevel < 50 && GameManager.powerInLevel > 40) {
+		else if (currentIndex != 5 && GameManager.powerInLevel <= 50 && GameManager.powerInLevel > 40) {
 
 			currentIndex = 5;
 			cells[0].GetComponent<Animator>().SetBool("Empty", false);
@@ -70,7 +67,7 @@ public class PowerGraphicManager : MonoBehaviour {
 			cells[5].GetComponent<Animator>().SetBool("CurrentAnimation", false);
 			cells[6].GetComponent<Animator>().SetBool("CurrentAnimation", false);
 		}
-		else if (currentIndex != 4 && GameManager.powerInLevel < 40 && GameManager.powerInLevel > 30) {
+		else if (currentIndex != 4 && GameManager.powerInLevel <= 40 && GameManager.powerInLevel > 30) {
 
 			currentIndex = 4;
 			cells[0].GetComponent<Animator>().SetBool("Empty", false);
@@ -89,7 +86,7 @@ public class PowerGraphicManager : MonoBehaviour {
 			cells[5].GetComponent<Animator>().SetBool("CurrentAnimation", false);
 			cells[6].GetComponent<Animator>().SetBool("CurrentAnimation", false);
 		}
-		else if (currentIndex != 3 && GameManager.powerInLevel < 30 && GameManager.powerInLevel > 20) {
+		else if (currentIndex != 3 && GameManager.powerInLevel <= 30 && GameManager.powerInLevel > 20) {
 			currentIndex = 3;
 
 			cells[0].GetComponent<Animator>().SetBool("Empty", false);
@@ -109,7 +106,7 @@ public class PowerGraphicManager : MonoBehaviour {
 			cells[6].GetComponent<Animator>().SetBool("CurrentAnimation", false);
 
 		}
-		else if (currentIndex != 2 && GameManager.powerInLevel < 20 && GameManager.powerInLevel > 10) {
+		else if (currentIndex != 2 && GameManager.powerInLevel <= 20 && GameManager.powerInLevel > 10) {
 
 			currentIndex = 2;
 
@@ -130,7 +127,7 @@ public class PowerGraphicManager : MonoBehaviour {
 			cells[6].GetComponent<Animator>().SetBool("CurrentAnimation", false);
 
 		}
-		else if (currentIndex != 1 && GameManager.powerInLevel < 10 && GameManager.powerInLevel > 0) {
+		else if (currentIndex != 1 && GameManager.powerInLevel <= 10 && GameManager.powerInLevel > 0) {
 
 			currentIndex = 1;
 
