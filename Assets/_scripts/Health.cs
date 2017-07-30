@@ -24,7 +24,15 @@ public class Health : MonoBehaviour {
 			GameManager.shootableObjects.Add(transform);
 		}
 	}
-	
+	private IEnumerator FlashRed () {
+
+		Color defaultColor = GetComponent<SpriteRenderer>().color;
+		GetComponent<SpriteRenderer>().color = Color.red;
+
+		yield return new WaitForSeconds(0.1f);
+
+		GetComponent<SpriteRenderer>().color = defaultColor;
+	}
 	public void TakeDamage (string faction, float damage) {
 
 		// uneffectedByFactions
@@ -51,6 +59,7 @@ public class Health : MonoBehaviour {
 			return;
 		}
 
+		StartCoroutine(FlashRed());
 		onDamage.Invoke();
 	}
 }

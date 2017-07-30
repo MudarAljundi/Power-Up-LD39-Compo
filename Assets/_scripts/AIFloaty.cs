@@ -7,8 +7,6 @@ public class AIFloaty : MonoBehaviour {
 	public float distanceToMoveToPlayer;
 	public float moveToPlayerImpulse;
 
-	private bool alertToPlayer = false;
-
 	private Rigidbody myRigidbody;
 	private Transform myTransform;
 

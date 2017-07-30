@@ -49,20 +49,60 @@ public class MovementController : MonoBehaviour {
 		} else if (hardInput.GetKeyUp("Jump") == true && myRigidbody.velocity.y > 0) {
 
 			myRigidbody.velocity = new Vector2(myRigidbody.velocity.x, myRigidbody.velocity.y * 0.5f);
-
 		}
+
+		// animation
+		if (canMove == true) {
+
+			if (Mathf.Abs(myRigidbody.velocity.x) > 2) {
+				GetComponent<Animator>().SetBool("IsMoving", true);
+			}
+			else {
+				GetComponent<Animator>().SetBool("IsMoving", false);
+			}
+		} if (canMove == false) {
+
+			float h = hardInput.GetAxis("Right", "Left");
+			if (h != 0) {
+				GetComponent<Animator>().SetBool("IsMoving", true);
+				if (h < 0) {
+					transform.localScale = new Vector3(-1, 1, 1);
+				}
+				else if (h > 0) {
+					transform.localScale = new Vector3(1, 1, 1);
+				}
+
+			} else {
+
+				GetComponent<Animator>().SetBool("IsMoving", false);
+			}
+		}
+
+		GetComponent<Animator>().SetBool("InMidair", !onGround);
 	}
 
 	private void FixedUpdate () {
-		
-		if (canMove == false) {
-			return;
-		}
 
 		float h = hardInput.GetAxis("Right", "Left");
-		
+
+		if (canMove == false) {
+			myRigidbody.useGravity = false;
+			return;
+		}
+		if (canMove == true && myRigidbody.useGravity == false) {
+			myRigidbody.useGravity = true;
+		}
+
+
 		if (h != 0) {
 			myRigidbody.AddForce(new Vector2(1, 0) * h * horizontalMoveForce, ForceMode.Force);
+			
+			if (h < 0) {
+				transform.localScale = new Vector3(-1, 1, 1);
+			}
+			else if (h > 0) {
+				transform.localScale = new Vector3(1, 1, 1);
+			}
 		}
 	}
 

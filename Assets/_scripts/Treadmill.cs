@@ -22,7 +22,7 @@ public class Treadmill : MonoBehaviour {
 
 			GameManager.playerTransform.GetComponent<Rigidbody>().velocity = new Vector3(0, 0);
 			GameManager.playerTransform.GetComponent<MovementController>().canMove = false;
-			GameManager.playerTransform.position = transform.position;
+			GameManager.playerTransform.position = transform.position + new Vector3(0.06f, 0.5f);
 
 			playerOnTreadmill = true;
 		}

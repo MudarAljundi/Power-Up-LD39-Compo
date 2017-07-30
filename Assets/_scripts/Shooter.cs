@@ -50,8 +50,13 @@ public class Shooter : MonoBehaviour {
 		*/
 	}
 	IEnumerator ResetEndPosition () {
+
+		GetComponent<SpriteRenderer>().color = Color.red;
+
 		yield return new WaitForSeconds(0.3f);
-		
+
+		GetComponent<SpriteRenderer>().color = Color.white;
+
 		lightningEnd.position = new Vector3(myTransform.position.x, myTransform.position.y, -0.6f);
 	}
 
