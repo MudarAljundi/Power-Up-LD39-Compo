@@ -1,7 +1,18 @@
 # Power Up! [LD39 Compo]
 Made in 2 days for Ludum Dare 39 Compo. Unity HTML5 platformer.
 
-## Uses the following 3rd-party assets which weren't included in the project:
+## Special Thanks
+[Stuffed Wombat](https://twitter.com/wombatstuff)
+[Muddasheep](farm.muddasheep.com)
+Zuhar
+
+## Tools used
+Unity
+Aseprite
+http://www.bfxr.net/
+http://abundant-music.com/
+
+## Uses the following 3rd-party Unity assets which weren't included in the project:
 
 Lightning Bolt Effect for Unity [Asset store](https://www.assetstore.unity3d.com/en/#!/content/59471)  
 *Lightning line effect. [Free]*
