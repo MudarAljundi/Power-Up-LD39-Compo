@@ -6,7 +6,7 @@ public class AIFloaty : MonoBehaviour {
 
 	public float distanceToMoveToPlayer;
 	public float moveToPlayerImpulse;
-
+	
 	private Rigidbody myRigidbody;
 	private Transform myTransform;
 
@@ -33,6 +33,10 @@ public class AIFloaty : MonoBehaviour {
 			targetVector = new Vector3(targetVector.x + Random.Range(-0.02f, 0.02f), targetVector.y + Random.Range(-0.02f, 0.02f));
 
 			myRigidbody.AddForce(targetVector * moveToPlayerImpulse, ForceMode.Impulse);
+
+			if (Random.Range(0, 100) > 90) {
+				GetComponent<AudioSource>().Play();
+			}
 		}
 		StartCoroutine(MoveToPlayerUpdate());
 	}

@@ -29,7 +29,7 @@ public class PowerGraphicManager : MonoBehaviour {
 			cells[5].GetComponent<Animator>().SetBool("CurrentAnimation", false);
 			cells[6].GetComponent<Animator>().SetBool("CurrentAnimation", true);
 		}
-		else if (currentIndex != 6 && GameManager.powerInLevel <= 60 && GameManager.powerInLevel >= 50) {
+		else if (currentIndex != 6 && GameManager.powerInLevel <= 60 && GameManager.powerInLevel > 50) {
 
 			currentIndex = 6;
 			cells[0].GetComponent<Animator>().SetBool("Empty", false);

@@ -8,6 +8,7 @@ public class MovementController : MonoBehaviour {
 
 	public AudioClip outOfAmmo;
 	public AudioClip jump;
+	public AudioClip deathSND;
 	public float horizontalMoveForce;
 	public float jumpImpulse;
 
@@ -35,6 +36,8 @@ public class MovementController : MonoBehaviour {
 	public void Revive () {
 		transform.position = checkpointPosition;
 		onRevive.Invoke();
+		GetComponent<AudioSource>().PlayOneShot(deathSND);
+		GetComponent<Health>().hp = 30f;
 	}
 
 	private void Update() {

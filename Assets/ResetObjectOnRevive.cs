@@ -11,6 +11,10 @@ public class ResetObjectOnRevive : MonoBehaviour {
 	
 	// Update is called once per frame
 	private void ReviveThisObject () {
-		gameObject.SetActive(true);
+		if (gameObject.activeSelf == false) {
+
+			gameObject.SetActive(true);
+			GameManager.shootableObjects.Add(transform);
+		}
 	}
 }

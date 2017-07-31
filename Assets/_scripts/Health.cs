@@ -15,7 +15,8 @@ public class Health : MonoBehaviour {
 	public UnityEvent onDamage;
 	public UnityEvent onKill;
 
-	private float hp;
+	[HideInInspector]
+	public float hp;
 
 	// Use this for initialization
 	private void Start () {
@@ -50,13 +51,9 @@ public class Health : MonoBehaviour {
 			onKill.Invoke();
 			GameManager.shootableObjects.Remove(transform);
 			
-			if (deadSND != null) {
-				GetComponent<AudioSource>().PlayOneShot(deadSND);
-			}
-			if (particleSystemExplosion == "Debris") {
-				GameManager.debrisParticleSystem.transform.position = transform.position;
-				GameManager.debrisParticleSystem.Play();
-			}
+			//if (deadSND != null) {
+			//	GameManager.loudAudioSource.PlayOneShot(deadSND);
+			//}
 
 			if (GetComponent<DestroyObject>()) {
 				GetComponent<DestroyObject>().ExecuteDestruction();
@@ -64,6 +61,10 @@ public class Health : MonoBehaviour {
 			return;
 		}
 
+		if (particleSystemExplosion == "Debris") {
+			GameManager.debrisParticleSystem.transform.position = transform.position;
+			GameManager.debrisParticleSystem.Play();
+		}
 		if (damageSND != null) {
 			GetComponent<AudioSource>().PlayOneShot(damageSND);
 		}

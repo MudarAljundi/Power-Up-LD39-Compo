@@ -203,7 +203,8 @@ AudioSource:
   m_GameObject: {fileID: 1977303671092214}
   m_Enabled: 1
   serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: 0}
+  OutputAudioMixerGroup: {fileID: 24300002, guid: f1ad0901ba7010749b4ee72ae6f4405a,
+    type: 2}
   m_audioClip: {fileID: 8300000, guid: ebcc7873261963641bf01294dbe187df, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 1
@@ -316,6 +317,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 731d3fb2f69b51e46a116b41d327cc37, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  damageSND: {fileID: 8300000, guid: 53332281f13038e42a7c9ef4ab77294d, type: 3}
+  deadSND: {fileID: 0}
   uneffectedByFactions: []
   maxHP: 30
   aimable: 0
@@ -330,6 +333,7 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine, Version=0.0.0.0, Culture=neutral,
       PublicKeyToken=null
+  hp: 0
 --- !u!114 &114619216199797312
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -374,6 +378,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 01b2c8c1c6e00c14d82be65e34a3169f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  outOfAmmo: {fileID: 8300000, guid: 951c3157069425741be3059d8585385f, type: 3}
+  jump: {fileID: 8300000, guid: b554ab3137ac8584fa9de8c863e85449, type: 3}
+  deathSND: {fileID: 8300000, guid: 3364af63949da4d40ad46cb1a6fe4b42, type: 3}
   horizontalMoveForce: 40
   jumpImpulse: 12
   canMove: 1

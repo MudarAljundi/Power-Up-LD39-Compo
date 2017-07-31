@@ -7,9 +7,6 @@ public class DamageSender : MonoBehaviour {
 	public float damage;
 	public string faction;
 	// Use this for initialization
-	void Start () {
-		
-	}
 	
 	// Update is called once per frame
 	private void OnCollisionEnter (Collision collision) {

@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
+using UnityEngine.Audio;
 
 public class GameManager : MonoBehaviour {
 
@@ -14,13 +15,17 @@ public class GameManager : MonoBehaviour {
 
 	public static GameObject gameManagerGameObject;
 	public static AudioSource treadmillAudioSource;
+	public static AudioSource loudAudioSource;
 
 	public static GameObject player;
 	public static Transform playerTransform;
 
 	public static ParticleSystem debrisParticleSystem;
 
+	
 	public static List<Transform> shootableObjects = new List<Transform>();
+
+	public AudioMixer masterMixer;
 
 	// Use this for initialization
 	private void Start () {
@@ -32,10 +37,14 @@ public class GameManager : MonoBehaviour {
 		gameManagerGameObject = gameObject;
 
 		player = GameObject.Find("Player");
-		treadmillAudioSource = GameObject.Find("MainCamera/TreadmillAudio").GetComponent<AudioSource>();
+		treadmillAudioSource = GameObject.Find("Meta/TreadmillAudio").GetComponent<AudioSource>();
+		loudAudioSource = GameObject.Find("Meta/LoudAudio").GetComponent<AudioSource>();
 		playerTransform = GameObject.Find("Player").transform;
 
 		debrisParticleSystem = transform.Find("DebrisParticleSystem").GetComponent<ParticleSystem>();
+	}
+	public void SetVolume(float value) {
+		masterMixer.SetFloat("SFX", value);
 	}
 
 	private void LateUpdate() {

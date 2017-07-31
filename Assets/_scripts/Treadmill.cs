@@ -9,6 +9,7 @@ public class Treadmill : MonoBehaviour {
 	// Use this for initialization
 	private void Start () {
 		GameManager.playerTransform.GetComponent<MovementController>().onJump.AddListener(StopTreadmill);
+		GameManager.playerTransform.GetComponent<Health>().onDamage.AddListener(StopTreadmill);
 		GameManager.playerTransform.GetComponent<Health>().onKill.AddListener(StopTreadmill);
 	}
 
