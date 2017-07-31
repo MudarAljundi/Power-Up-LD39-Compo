@@ -9,8 +9,7 @@ Zuhar
 ## Tools used
 Unity 2017  
 [Aseprite](https://www.aseprite.org/)  
-http://www.bfxr.net/  
-http://abundant-music.com/
+http://www.bfxr.net/
 
 ## Uses the following 3rd-party Unity assets which weren't included in the project:
 
