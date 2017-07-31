@@ -27,3 +27,7 @@ Probuilder Advanced [Asset store](https://www.assetstore.unity3d.com/en/#!/conte
 
 Animation Importer [Asset store](https://github.com/talecrafter/AnimationImporter)  
 *Aseprite-to-Unity sprite importer. [Optional, free]*
+
+** Update 1
+- re-enabled the cool looking debris when destroying objects. I disabled them as a test and forgot to enable them on release. Not sure how I missed that :((
+- added arabic support.
