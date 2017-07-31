@@ -47,10 +47,15 @@ public class Health : MonoBehaviour {
 
 		hp -= damage;
 
+		if (particleSystemExplosion == "Debris") {
+			GameManager.debrisParticleSystem.transform.position = transform.position;
+			GameManager.debrisParticleSystem.Play();
+		}
+
 		if (hp < 0) {
 			onKill.Invoke();
 			GameManager.shootableObjects.Remove(transform);
-			
+
 			//if (deadSND != null) {
 			//	GameManager.loudAudioSource.PlayOneShot(deadSND);
 			//}
@@ -60,11 +65,7 @@ public class Health : MonoBehaviour {
 			}
 			return;
 		}
-
-		if (particleSystemExplosion == "Debris") {
-			GameManager.debrisParticleSystem.transform.position = transform.position;
-			GameManager.debrisParticleSystem.Play();
-		}
+		
 		if (damageSND != null) {
 			GetComponent<AudioSource>().PlayOneShot(damageSND);
 		}

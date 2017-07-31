@@ -6,6 +6,8 @@ using UnityEngine.Audio;
 
 public class GameManager : MonoBehaviour {
 
+	public bool arabic = false;
+
 	public static float powerInLevel = 70;
 
 	public static int playerLayerMask;
@@ -21,7 +23,6 @@ public class GameManager : MonoBehaviour {
 	public static Transform playerTransform;
 
 	public static ParticleSystem debrisParticleSystem;
-
 	
 	public static List<Transform> shootableObjects = new List<Transform>();
 

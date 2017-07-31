@@ -244,6 +244,7 @@ GameObject:
   - component: {fileID: 224609625035243716}
   - component: {fileID: 222995887984858632}
   - component: {fileID: 114803287001411548}
+  - component: {fileID: 114390965881593598}
   m_Layer: 5
   m_Name: Text
   m_TagString: Untagged
@@ -367,6 +368,7 @@ GameObject:
   - component: {fileID: 224998240133813786}
   - component: {fileID: 222022780783282684}
   - component: {fileID: 114528949282891952}
+  - component: {fileID: 114452743487897788}
   m_Layer: 5
   m_Name: Text
   m_TagString: Untagged
@@ -1452,6 +1454,22 @@ MonoBehaviour:
   m_FallbackScreenDPI: 96
   m_DefaultSpriteDPI: 96
   m_DynamicPixelsPerUnit: 1
+--- !u!114 &114390965881593598
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1395017965554106}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7c081c44711d2ca4fa5ceb70fe782bab, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  arabicFont: {fileID: 12800000, guid: 2238dbdf7a7722845885cba35cd270da, type: 3}
+  newAnchoredPosition: {x: 6, y: -40}
+  newLineSpacing: 1
+  newAlignment: 
+  newText: "\u0635\u0648\u062A"
 --- !u!114 &114444884067840956
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1466,6 +1484,22 @@ MonoBehaviour:
   targetTransform: {fileID: 0}
   offsetPosition: {x: 0, y: 0, z: -1}
   lerpSpeed: 0.25
+--- !u!114 &114452743487897788
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1589459618028746}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7c081c44711d2ca4fa5ceb70fe782bab, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  arabicFont: {fileID: 12800000, guid: 2238dbdf7a7722845885cba35cd270da, type: 3}
+  newAnchoredPosition: {x: -12, y: 0}
+  newLineSpacing: 0.7
+  newAlignment: UpperRight
+  newText: "\u062A\u0643\u0628\u064A\u0631 \u0627\u0644\u0635\u0648\u0631\u0629"
 --- !u!114 &114487646933817956
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1643,6 +1677,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 31d6d1bc6d4ab69448324e73e6932dc9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  arabic: 1
   masterMixer: {fileID: 24100000, guid: f1ad0901ba7010749b4ee72ae6f4405a, type: 2}
 --- !u!114 &114696748291424896
 MonoBehaviour:

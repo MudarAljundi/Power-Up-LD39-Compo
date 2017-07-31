@@ -8,8 +8,14 @@ public class GoToLink : MonoBehaviour, IPointerDownHandler {
 	public string link;
 
 	public void OnPointerDown(PointerEventData eventData) {
+		
+		if (Application.platform == RuntimePlatform.WebGLPlayer) {
 
-		Application.OpenURL(link);
+			Application.ExternalEval("window.open('" + link + "');");
+		} else {
+
+			Application.OpenURL(link);
+		}
 	}
 	
 }
