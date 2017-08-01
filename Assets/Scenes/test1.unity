@@ -20122,7 +20122,7 @@ Mesh:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
-  m_Name: pb_Mesh61238
+  m_Name: pb_Mesh18634
   serializedVersion: 8
   m_SubMeshes:
   - serializedVersion: 2
@@ -26583,7 +26583,7 @@ MonoBehaviour:
   newAlignment: UpperRight
   newText: "\r\u0645\u0646 \u0623\u0646\u0627\u061F \u0623\u0623\u0646\u0627 \u062C\u0631\u0630
     \u0623\u0645 \u0633\u0639\u062F\u0627\u0646\u061F\r\n\u0623\u064A\u0651 \u0645\u0646\u0647\u0645\u0627
-    \u064A\u0643\u0648\u0646 \u062D\u0633\u0646\u0627\u064B.\r\n:("
+    \u064A\u0643\u0648\u0646 \u062D\u0633\u0646\u0627\u064B!\n:("
 --- !u!1001 &963409858
 Prefab:
   m_ObjectHideFlags: 0
